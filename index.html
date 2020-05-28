@@ -11,39 +11,54 @@
 </head>
 
 <body>
-  <form class="lastform">
+
+
+  <form id="signInForm" onsubmit = 'return Check();' class="lastform" >
     <label> User Name </label>
     <input id = 'name' type="text" name="username">
     <br><br>
     <label> Password </label>
-    <input type="password" name="password">
+    <input id='password' type="password" name="password">
     <br><br>
-    <button  type="button" id='sign-in'> sign in </button>
+    <input type="submit" name="submit_form" value="Submit">
+    <input type="button" name="sign-up-Button" value="Sign up" id="singUpButton">
+
+    <p id='error_para'> </p>
+
   </form>
 
-  <form class="form">
+
+
+
+
+
+  <form  onsubmit='return finish()' id='signUpForm' class="form" style="display:none;">
     <label> First Name </label>
-    <input id = 'name' type="text" name="name">
+    <input id = 'first-Name' type="text" name="name">
     <br><br>
 
     <label> Last Name </label>
-    <input id = 'lname' type="text" name="lname">
+    <input id = 'last-Name' type="text" name="lname">
     <br><br> 
 
     <label> Email </label>
-    <input id = 'Email' type="email" name="email">
+    <input id = 'Email' type="text" name="email">
     <br><br>
 
     <label> Password </label>
-    <input id='password' type="password" name="password">
+    <input id='Pass' type="password" name="password">
     <br><br>
 
     <label> Address </label>
     <input id = 'Address' type="text" name="Address">
     <br><br>
-   
-    <button  type="button" id='sign-up'> sign up </button>
+   <input type="submit" value="Done" id='done'>  
+
+   <p id='message'> </p>
+
+
   </form>
+
 
 <script src='home.js'></script>
 </body>
