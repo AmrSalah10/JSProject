@@ -2,8 +2,18 @@ const nameField = document.getElementById('name');
 let passwordField = document.getElementById('password');
 
 // database mocks
+
+// TODO: we need to have users emails
 const names = ['amr', 'hima'];
 const passwords = ['12345678', '910111213'];
+
+// TODO: for resetPassword feature add function to validate that the entered email exists in the database list
+// TODO: if it exits generate reset password pin (4 digit number) and send it to his email
+// if doesn't exist show an appropiate message
+
+// TODO: for resetpin feature add function to validate that the entered pin is valid for user
+// TODO: if it exits print 'now you can change your password'
+// if doesn't exist show an appropiate message
 
 
 function Check() {

@@ -7,15 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS Starter</title>
   <link rel="stylesheet" href="style.css">
- 
+
 </head>
 
 <body>
 
-
-  <form id="signInForm" onsubmit = 'return Check();' class="lastform" >
+  <!-- TODO: add button to reset password 'resetPasswordBtn' -->
+  <form id="signInForm" onsubmit='return Check();' class="lastform">
     <label> User Name </label>
-    <input id = 'name' type="text" name="username">
+    <input id='name' type="text" name="username">
     <br><br>
     <label> Password </label>
     <input id='password' type="password" name="password">
@@ -28,18 +28,19 @@
   </form>
 
 
-
-  <form  onsubmit='return finish()' id='signUpForm' class="form" style="display:none;">
+  <!-- TODO: add form to enter user email , this form is visible after clicking resetPasswordBtn
+  it has button "already has resetPin that opens another form for entering the resetpin" -->
+  <form onsubmit='return finish()' id='signUpForm' class="form" style="display:none;">
     <label> First Name </label>
-    <input id = 'first-Name' type="text" name="name">
+    <input id='first-Name' type="text" name="name">
     <br><br>
 
     <label> Last Name </label>
-    <input id = 'last-Name' type="text" name="lname">
-    <br><br> 
+    <input id='last-Name' type="text" name="lname">
+    <br><br>
 
     <label> Email </label>
-    <input id = 'Email' type="text" name="email">
+    <input id='Email' type="text" name="email">
     <br><br>
 
     <label> Password </label>
@@ -47,17 +48,17 @@
     <br><br>
 
     <label> Address </label>
-    <input id = 'Address' type="text" name="Address">
+    <input id='Address' type="text" name="Address">
     <br><br>
-   <input type="submit" value="Done" id='done'>  
+    <input type="submit" value="Done" id='done'>
 
-   <p id='message'> </p>
+    <p id='message'> </p>
 
 
   </form>
 
 
-<script src='home.js'></script>
+  <script src='home.js'></script>
 </body>
 
 </html>
