@@ -7,44 +7,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS Starter</title>
   <link rel="stylesheet" href="style.css">
-
+ 
 </head>
 
 <body>
 
-  <h1>
-    this fourms need to be more interactive. check <a href="https://twitter.com/login" target="_blank">twitter</a> login
-    fourm and try
-    to implelment it
-  </h1>
-  <h6>this UI enhancement shall be implelmented after the reset password feature is done</h6>
-  <form id="signInForm" onsubmit='return Check();' class="lastform">
+<!-- Sign In Form -->
+
+  <form id="signInForm" onsubmit = 'return Check();' class="lastform" >
+
     <label> User Name </label>
-    <input id='name' type="text" name="username">
+    <input id = 'name' type="text" name="username">
     <br><br>
+
     <label> Password </label>
     <input id='password' type="password" name="password">
     <br><br>
+
     <input type="submit" name="submit_form" value="Submit">
+
     <input type="button" name="sign-up-Button" value="Sign up" id="singUpButton">
+
     <a href='#' id='resetLink'> Reset Password</a>
+
+
     <p id='error_para'> </p>
 
   </form>
 
 
+<!-- Sign Up Form -->
 
-  <form onsubmit='return finish()' id='signUpForm' class="form" style="display:none;">
+  <form  onsubmit='return finish()' id='signUpForm' class="form" style="display:none;">
     <label> First Name </label>
-    <input id='first-Name' type="text" name="name">
+    <input id = 'first-Name' type="text" name="name">
     <br><br>
 
     <label> Last Name </label>
-    <input id='last-Name' type="text" name="lname">
-    <br><br>
+    <input id = 'last-Name' type="text" name="lname">
+    <br><br> 
 
     <label> Email </label>
-    <input id='Email' type="text" name="email">
+    <input id = 'Email' type="text" name="email">
 
     <br><br>
 
@@ -53,38 +57,93 @@
     <br><br>
 
     <label> Address </label>
-    <input id='Address' type="text" name="Address">
+    <input id = 'Address' type="text" name="Address">
     <br><br>
-    <input type="submit" value="Done" id='done'>
+   <input type="submit" value="Done" id='done'>  
 
-    <p id='message'> </p>
+   <input type='button' id='backHome' value="Back Home">
 
+
+   <p id='message'> </p>
 
   </form>
 
-  <form onsubmit='return resetFun()' id='resetForm' style="display: none;">
+
+
+<!--  Reset Form -->
+    
+  <form onsubmit='return resetFun()'id='resetForm' style="display: none;">
     <label> User Name </label>
-    <input id='user' type="text" name="username">
+    <input id = 'user' type="text" name="username">
 
     <br><br>
 
     <label> New Password </label>
-    <input id='newPass' type="password">
+    <input id='newPass' type="password"> 
+
     <br><br>
 
     <label> Retype Password </label>
-    <input id='rePass' type="password">
-    <br><br>
+    <input id='rePass' type="password"> 
 
-    <input id='reset' type="submit" value="Reset">
-    <br><br>
+    <br><br>  
 
-    <p id='reset-message'> </p>
+    <input id='reset' type="submit" value="Reset">     
+    
+    <br><br>  
 
+    <input type='button' id='back' value="Back"> 
+
+    <p id='reset-message'> </p> 
 
   </form>
 
-  <script src='home.js'></script>
+
+<!-- Pin Form -->
+
+  <form onsubmit='return generate()'id='pinForm' style="display: none;">
+    <label> User Name </label>
+    <input id = 'userName' type="text" name="username">
+
+    <br><br>
+
+    <label>  Email </label>
+    <input id = 'userMail' type="text" name="userMail">
+    
+    <br><br>  
+
+    <input type="submit" value="Generate Pin">
+
+    <input type='button' id='return' value="Return"> 
+
+    <a href="#" id='pinLink'> Already have a pin code </a>
+    <br><br>
+
+    <p id='generate-message'> </p> 
+
+  </form>
+
+
+<!-- Check Pin Form -->
+
+
+  <form onsubmit="return checkPinfunction()" id='checkPinForm' style="display: none;"> 
+
+    <label> Pin </label>
+    <input type="text" id="pin">
+    <br><br>
+
+    <input type="submit" value="Enter Pin" id="Check">
+
+    <input type="button" value="Regenerate" id="regenerate"> 
+    <br><br>
+
+    <p id='check-pin-message'> </p> 
+
+  </form>
+
+<script src='script.js'></script>
 </body>
 
 </html>
+
